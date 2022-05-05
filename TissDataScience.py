@@ -13,6 +13,7 @@ import lightgbm as lgb
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
+from sklearn import *
 import portion as P
 
 warnings.filterwarnings('ignore')
