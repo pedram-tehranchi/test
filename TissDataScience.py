@@ -13,7 +13,6 @@ import lightgbm as lgb
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
-from sklearn import *
 import portion as P
 
 warnings.filterwarnings('ignore')
@@ -396,7 +395,7 @@ class Ontario_pipeline:
             self.model_loaded == 1
         self.data = dataframe
         self._preprocess_x()
-        self.data['demand_predicted'] = self.et_model.predict(self.data)
+        self.data['demand_predicted'] = self.et_model.predict(self.data.drop(['time','Ontario Demand'], axis=1))
         return self.data
 
 
